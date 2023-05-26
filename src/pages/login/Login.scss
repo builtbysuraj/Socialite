@@ -1,0 +1,156 @@
+@import "../../styles/colors";
+
+// function for centering using flex
+@mixin flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// main container
+.container {
+  max-width: 90%;
+  min-height: 88vh;
+  @include flexCenter();
+  margin: auto;
+  gap: 10rem;
+}
+
+// left section
+.left {
+  .heading {
+    font-size: 6rem;
+    font-weight: 700;
+    color: $primary;
+  }
+  .description {
+    font-size: 2.89rem;
+    max-width: 450px;
+  }
+}
+
+// right section
+.right {
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  border: none;
+  width: 440px;
+  min-height: 390px;
+  text-align: center;
+  position: relative;
+}
+
+// form
+form {
+  @include flexCenter();
+  flex-direction: column;
+  input {
+    line-height: 1.6rem;
+    vertical-align: middle;
+    height: 53px;
+    border: 1px solid #dddfe2;
+    padding: 2rem 2rem;
+    width: 90%;
+    border-radius: 5px;
+    margin-top: 2rem;
+    font-size: 1.8rem;
+    outline-color: $primary;
+  }
+  ::placeholder {
+    opacity: 0.8;
+  }
+  button {
+    width: 90%;
+    height: 50px;
+    margin-top: 2.5rem;
+    background-color: $primary;
+    color: #fff;
+    border: none;
+    font-size: 2.1rem;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+}
+
+// forgot password
+.forgotten {
+  margin: 2rem 0rem;
+  a {
+    text-decoration: none;
+    color: $primary;
+  }
+  :hover {
+    text-decoration: underline;
+  }
+}
+
+// horizontal bar
+.h-bar {
+  @include flexCenter();
+  hr {
+    width: 90%;
+    opacity: 0.4;
+  }
+}
+
+.new-acc {
+  margin-top: 1.6rem;
+  button {
+    height: 48px;
+    color: #fff;
+    padding: 1.2rem;
+    border: none;
+    font-size: 1.8rem;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: $secondary;
+  }
+  :hover {
+    background-color: #3da727;
+  }
+}
+
+.info {
+  width: 100%;
+  position: absolute;
+  top: 113%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #1c1e21;
+  }
+  :hover {
+    text-decoration: underline;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .container {
+    gap: 4.3rem;
+    width: 100%;
+    .heading,
+    .description {
+      text-align: center;
+    }
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .container {
+    overflow: auto;
+  }
+  .right {
+    width: 100%;
+  }
+  .new-acc {
+    button {
+      left: 20%;
+    }
+  }
+}
