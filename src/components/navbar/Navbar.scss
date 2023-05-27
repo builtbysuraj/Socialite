@@ -1,0 +1,13 @@
+@import "../../styles/colors";
+
+// function for centering using flex
+@mixin flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar-container{
+  border: 1px solid red;
+  height: 7rem;
+}

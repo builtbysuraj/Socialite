@@ -1,8 +1,11 @@
+import { useNavigate } from "react-router-dom"
 import "./Login.scss"
 
 export default function Login() {
+  const navigate = useNavigate()
   const handleSubmit = (e: React.FormEvent<HTMLButtonElement>) => {
     e.preventDefault()
+    navigate("/home")
   }
 
   return (
@@ -20,6 +23,7 @@ export default function Login() {
             spellCheck="false"
             autoComplete="false"
             placeholder="Email address or phone number"
+            autoFocus
           />
           <input type="password" placeholder="Password" />
           <button onClick={(e) => handleSubmit(e)} type="submit">

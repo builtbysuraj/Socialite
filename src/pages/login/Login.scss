@@ -14,31 +14,31 @@
   @include flexCenter();
   margin: auto;
   gap: 10rem;
-}
-
-// left section
-.left {
-  .heading {
-    font-size: 6rem;
-    font-weight: 700;
-    color: $primary;
+  
+  // left section
+  .left {
+    .heading {
+      font-size: 6rem;
+      font-weight: 700;
+      color: $primary;
+    }
+    .description {
+      font-size: 2.89rem;
+      max-width: 450px;
+    }
   }
-  .description {
-    font-size: 2.89rem;
-    max-width: 450px;
-  }
-}
 
-// right section
-.right {
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
-  background: #fff;
-  border: none;
-  width: 440px;
-  min-height: 390px;
-  text-align: center;
-  position: relative;
+  // right section
+  .right {
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    border: none;
+    width: 440px;
+    min-height: 390px;
+    text-align: center;
+    position: relative;
+  }
 }
 
 // form
