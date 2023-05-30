@@ -1,46 +1,45 @@
 import {
-  Home,
   Search,
   Person,
   Notifications,
   Comment,
+  AccountCircle,
 } from "@mui/icons-material"
+import { useNavigate } from "react-router-dom"
 
 import "./Navbar.scss"
 
 export default function Navbar() {
+  const navigate = useNavigate()
   return (
-    <nav className="navbar-container">
+    <header className="navbar-container">
       <section className="navbar-wrapper">
         <div className="left">
-          <div className="icon">
-            <Home />
-          </div>
           <div className="heading">Socialite</div>
         </div>
         <div className="center">
-          <Search />
-          <input type="text" placeholder="Search for friends, post or video" />
+          <input type="text" placeholder="Search Facebook" />
         </div>
         <div className="right">
-          <section className="links">
-            <a href="#">Homepage</a>
-            <a href="#">Timeline</a>
+          <section className="user-icons">
+            <div className="icon-item">
+              <Person className="icon" />
+              <span>3</span>
+            </div>
+            <div className="icon-item">
+              <Notifications className="icon" />
+              <span>7</span>
+            </div>
+            <div className="icon-item">
+              <Comment className="icon" />
+              <span>13</span>
+            </div>
           </section>
-          <div className="user-icons">
-            <div className="person">
-              <Person />
-            </div>
-            <div className="notify">
-              <Notifications />
-            </div>
-            <div className="msg">
-              <Comment />
-            </div>
-          </div>
-          <div className="profile"></div>
+          <section className="profile">
+            <AccountCircle className="icon" />
+          </section>
         </div>
       </section>
-    </nav>
+    </header>
   )
 }

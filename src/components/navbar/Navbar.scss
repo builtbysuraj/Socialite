@@ -1,5 +1,7 @@
 @import "../../styles/colors";
 
+$_primary: #f0f2f5;
+
 // function for centering using flex
 @mixin flexCenter {
   display: flex;
@@ -7,7 +9,105 @@
   justify-content: center;
 }
 
-.navbar-container{
-  border: 1px solid red;
-  height: 7rem;
+a {
+  text-decoration: none;
+  color: $_primary;
+  font-weight: 500;
+}
+
+// main nav container
+.navbar-container {
+  // background-color: $primary;
+  background-color: white;
+  width: 100%;
+  box-shadow: 0px 2px 3px 0px #00000033;
+  .navbar-wrapper {
+    display: flex;
+    height: 6.5rem;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 15px;
+    padding-right: 15px;
+    .icon {
+      font-size: 28px;
+    }
+    // left section
+    .left {
+      @include flexCenter();
+      margin-left: 2rem;
+      .heading {
+        font-size: 3.2rem;
+        color: $primary;
+        cursor: pointer;
+        font-weight: 600;
+        display: flex;
+        align-self: flex-start;
+      }
+    }
+    // center section
+    .center {
+      @include flexCenter();
+      width: 50%;
+      position: relative;
+      input {
+        background-color: $_primary;
+        width: 70rem;
+        height: 4.8rem;
+        border-radius: 50px;
+        border: none;
+        outline: none;
+        padding: 2rem;
+        margin: 1rem;
+        margin-left: 2rem;
+        font-size: 1.7rem;
+      }
+      ::placeholder {
+        color: #454545;
+      }
+    }
+    // right section
+    .right {
+      width: 30%;
+      max-width: 50rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      .links {
+        display: flex;
+        align-items: center;
+        padding: 1rem;
+        cursor: pointer;
+      }
+      .user-icons {
+        @include flexCenter();
+        .icon-item {
+          @include flexCenter();
+          position: relative;
+          padding: 0.24rem;
+          margin: 0.6rem;
+          cursor: pointer;
+          span {
+            color: #fff;
+            background-color: #ff0000;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            font-size: 1.3rem;
+            position: absolute;
+            @include flexCenter();
+            top: -5px;
+            right: -5px;
+          }
+        }
+      }
+      .profile {
+        @include flexCenter();
+        cursor: pointer;
+        .icon {
+          font-size: 40px;
+          margin-right: 1rem;
+        }
+      }
+    }
+  }
 }
