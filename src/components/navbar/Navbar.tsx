@@ -1,5 +1,4 @@
 import {
-  Search,
   Person,
   Notifications,
   Comment,
@@ -18,7 +17,7 @@ export default function Navbar() {
           <div className="heading">Socialite</div>
         </div>
         <div className="center">
-          <input type="text" placeholder="Search Facebook" />
+          <input type="text" placeholder="Search" />
         </div>
         <div className="right">
           <section className="user-icons">
@@ -32,7 +31,7 @@ export default function Navbar() {
             </div>
             <div className="icon-item">
               <Comment className="icon" />
-              <span>13</span>
+              <span>5</span>
             </div>
           </section>
           <section className="profile">

@@ -63,6 +63,7 @@ a {
       }
       ::placeholder {
         color: #454545;
+        opacity: 0.8;
       }
     }
     // right section
@@ -96,7 +97,7 @@ a {
             position: absolute;
             @include flexCenter();
             top: -5px;
-            right: -5px;
+            right: -2px;
           }
         }
       }
