@@ -1,7 +1,7 @@
 import { useEffect } from "react"
 
-import PostInputCard from "../layouts/PostInputCard"
-import PostCard from "../post-card/PostCard"
+import PostCard from "../layouts/post-card/PostCard"
+import PostInputCard from "../layouts/post-input-card/PostInputCard"
 import "./Post.scss"
 
 export default function Post() {
@@ -11,7 +11,8 @@ export default function Post() {
   return (
     <main className="post-container">
       <PostInputCard />
-      {/* <div className="posts-wrapper"></div>  */}
+      <PostCard />
+      <PostCard />
       <PostCard />
     </main>
   )

@@ -1,0 +1,79 @@
+@import "../../../styles/colors";
+
+.post-card-container {
+  margin: 2rem 2rem;
+  height: 50rem;
+  width: 96vh;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+  .post-card-wrapper {
+    margin: 0.2rem;
+    .top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.2rem;
+      .top-left {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-left: 1rem;
+        .post-username {
+          font-weight: 600;
+          cursor: pointer;
+        }
+        .posted-time {
+          font-size: 1.1rem;
+        }
+      }
+    }
+    .mid {
+      .post-card-description {
+        margin-left: 2.5rem;
+        margin-bottom: 1rem;
+      }
+      img {
+        width: 93%;
+        height: 36rem;
+        margin-left: 2.6rem;
+        cursor: pointer;
+      }
+    }
+    .bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .bottom-left {
+        display: flex;
+        margin-left: 2rem;
+        padding: 0.4rem;
+        gap: 0.3rem;
+        .icon {
+          font-size: 25px;
+          cursor: pointer;
+        }
+        span {
+          cursor: pointer;
+        }
+      }
+      .bottom-right {
+        cursor: pointer;
+        margin-right: 2.3rem;
+      }
+      span:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .icon {
+    font-size: 40px;
+    color: $primary;
+    cursor: pointer;
+  }
+  .morehoriz-icon {
+    font-size: 27px;
+    cursor: pointer;
+  }
+}
